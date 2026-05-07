@@ -222,6 +222,20 @@ fn preset_catalog() -> Vec<Preset> {
             ],
             script_ref: Some("turkey_dnsredir_alternative6_superonline.cmd".into()),
         },
+        Preset {
+            id: "discord-only".into(),
+            label: "Sadece Discord".into(),
+            description: "Sadece Discord'a erişim sağlar. Diğer sitefler engellenir.".into(),
+            launch_mode: "cli-args".into(),
+            args: vec![
+                "-1".into(),
+                "--blacklist".into(),
+                "..\\russia-blacklist.txt".into(),
+                "--blacklist".into(),
+                "..\\discord-custom.txt".into(),
+            ],
+            script_ref: Some("discord-only.cmd".into()),
+        },
     ]
 }
 
