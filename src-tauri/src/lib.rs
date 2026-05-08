@@ -122,6 +122,8 @@ fn preset_catalog() -> Vec<Preset> {
             description: "GitHub release ZIP icindeki turkey_dnsredir.cmd ile ayni komutu calistirir.".into(),
             launch_mode: "cli-args".into(),
             args: vec![
+                "--blacklist".into(),
+                "..\\hosts.txt".into(),
                 "-5".into(),
                 "--set-ttl".into(),
                 "5".into(),
